@@ -1,0 +1,24 @@
+<launch>
+    <!-- 添加被执行的节点 -->
+    <!-- 小海龟GUI  turtlesim包中的 被运行的节点文件 turtlesim_node  -->
+    <node pkg = "turtlesim"    type = "turtlesim_node"      name = "turtle_GUI"/>
+    <node pkg = "turtlesim"    type = "turtle_teleop_key"      name = "turtle_key"/>
+
+    <!-- 将自己编写的输出了，在本helloWorld包中 启动 helloWorld节点（在cmakelist中的那个映射名） -->
+    <!-- 因为我们在执行文件(main.cpp, main.py)中有输出 ROS_INFO 所以还要加一个output参数输出到屏幕 -->
+    <node pkg = "helloWorld" type = "helloWorld" name = "hello_c" output = "screen"/>
+    <node pkg = "helloWorld" type = "main.py" name = "hello_py" output = "screen"/>
+</launch>
+
+
+<!-- 
+node ： 包含的某个节点
+
+pkg ：功能包
+
+type ：被运行的节点文件
+
+name：为节点命名
+
+output： 设置日志的输出目标 
+-->

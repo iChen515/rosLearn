@@ -1,0 +1,8 @@
+prefix=/home/user/rosLearn/demo01/install
+
+Name: helloWorld
+Description: Description of helloWorld
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

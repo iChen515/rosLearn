@@ -1,0 +1,4 @@
+<launch>
+    <node pkg = "plumbing_pub_sub" type = "plumbing_pub_sub_node" name = "pubxxc" output = "screen" />
+    <node pkg = "plumbing_pub_sub" type = "plumbing_pub_sub_node2" name = "subxxc" output = "screen" />
+</launch>
