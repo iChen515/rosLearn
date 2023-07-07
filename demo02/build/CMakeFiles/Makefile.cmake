@@ -18,6 +18,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/user/rosLearn/demo02/src/CMakeLists.txt"
   "/home/user/rosLearn/demo02/src/plumbing_pub_sub/CMakeLists.txt"
   "/home/user/rosLearn/demo02/src/plumbing_pub_sub/package.xml"
+  "/home/user/rosLearn/demo02/src/plumbing_pub_sub/scripts/main_pub.py"
+  "/home/user/rosLearn/demo02/src/plumbing_pub_sub/scripts/main_sub.py"
   "/opt/ros/melodic/share/catkin/cmake/../package.xml"
   "/opt/ros/melodic/share/catkin/cmake/all.cmake"
   "/opt/ros/melodic/share/catkin/cmake/assert.cmake"

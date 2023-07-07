@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
 
         // 添加日志
         //ss.str()是字符串类型，但是输出的时候使用的是%s，需要类型转换一下.c_str()
-        ROS_INFO("发布的数据是：%s", ss.str().c_str()); 
+        ROS_INFO("发布的数据是：%s", ss.str().c_str());
         rate.sleep();
 
         // ros::spinOnce(); //官方建议，处理回调函数（这里没用到回调函数）
