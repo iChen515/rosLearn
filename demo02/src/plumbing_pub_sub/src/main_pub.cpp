@@ -28,7 +28,8 @@ int main(int argc, char *argv[]){
     ros::Rate rate(1);
     // 设置编号
     int count = 0;
-
+    //订阅的时候会发现第一条数据可能会丢失，因为此时publisher 还未在 roscore 注册完毕
+    ros::Duration(3).sleep(); //休眠3秒  延迟第一条数据的发送
 
     while (ros::ok()){
         count++;
