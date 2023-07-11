@@ -7,10 +7,11 @@ project(plumbing_pub_sub)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
+find_package(catkin REQUIRED COMPONENTS #编译时依赖
   roscpp
   rospy
   std_msgs
+  message_generation #有自定义的 话题通信msg 则需要添加这一句
 )
 
 ## System dependencies are found with CMake's conventions
@@ -52,6 +53,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   Message1.msg
 #   Message2.msg
 # )
+add_message_files(
+  FILES
+  Person.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -72,6 +77,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   DEPENDENCIES
 #   std_msgs
 # )
+generate_messages( #说明我们自定义的msg要依赖于标准消息
+  DEPENDENCIES
+  std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -102,10 +111,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
+catkin_package( #运行时依赖
 #  INCLUDE_DIRS include
 #  LIBRARIES plumbing_pub_sub
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+ CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
 #  DEPENDS system_lib
 )
 
