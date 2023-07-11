@@ -3,12 +3,14 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/opt/ros/melodic/include"
             ],
             "defines": [],
+            "intelliSenseMode":"linux-gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
-            "cppStandard": "gnu++14",
-            "intelliSenseMode": "linux-gcc-x64"
+            "cppStandard": "c++17",
         }
     ],
     "version": 4

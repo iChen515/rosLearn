@@ -136,6 +136,7 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/plumbing_pub_sub_node.cpp)
 add_executable(${PROJECT_NAME}_node src/main_pub.cpp)
 add_executable(${PROJECT_NAME}_node2 src/main_sub.cpp)
+add_executable(${PROJECT_NAME}_node3 src/pub_cp.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -154,6 +155,9 @@ target_link_libraries(${PROJECT_NAME}_node
 target_link_libraries(${PROJECT_NAME}_node2
   ${catkin_LIBRARIES}
 )
+target_link_libraries(${PROJECT_NAME}_node3
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
@@ -168,6 +172,7 @@ catkin_install_python(PROGRAMS
   # scripts/my_python_script
   scripts/main_pub.py
   scripts/main_sub.py
+  scripts/sub_cp.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

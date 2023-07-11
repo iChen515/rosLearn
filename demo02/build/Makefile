@@ -389,6 +389,19 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named plumbing_pub_sub_node3
+
+# Build rule for target.
+plumbing_pub_sub_node3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub_node3
+.PHONY : plumbing_pub_sub_node3
+
+# fast build rule for target.
+plumbing_pub_sub_node3/fast:
+	$(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/build
+.PHONY : plumbing_pub_sub_node3/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -535,6 +548,7 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... plumbing_pub_sub_node3"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"

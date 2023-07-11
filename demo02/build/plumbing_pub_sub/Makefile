@@ -288,6 +288,21 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/rule:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/rule
+.PHONY : plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/rule
+
+# Convenience name for target.
+plumbing_pub_sub_node3: plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/rule
+
+.PHONY : plumbing_pub_sub_node3
+
+# fast build rule for target.
+plumbing_pub_sub_node3/fast:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/build
+.PHONY : plumbing_pub_sub_node3/fast
+
+# Convenience name for target.
 plumbing_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : plumbing_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
@@ -476,6 +491,33 @@ src/main_sub.cpp.s:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node2.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node2.dir/src/main_sub.cpp.s
 .PHONY : src/main_sub.cpp.s
 
+src/pub_cp.o: src/pub_cp.cpp.o
+
+.PHONY : src/pub_cp.o
+
+# target to build an object file
+src/pub_cp.cpp.o:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/src/pub_cp.cpp.o
+.PHONY : src/pub_cp.cpp.o
+
+src/pub_cp.i: src/pub_cp.cpp.i
+
+.PHONY : src/pub_cp.i
+
+# target to preprocess a source file
+src/pub_cp.cpp.i:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/src/pub_cp.cpp.i
+.PHONY : src/pub_cp.cpp.i
+
+src/pub_cp.s: src/pub_cp.cpp.s
+
+.PHONY : src/pub_cp.s
+
+# target to generate assembly for a file
+src/pub_cp.cpp.s:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/src/pub_cp.cpp.s
+.PHONY : src/pub_cp.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -497,6 +539,7 @@ help:
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... install"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... plumbing_pub_sub_node3"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
@@ -512,6 +555,9 @@ help:
 	@echo "... src/main_sub.o"
 	@echo "... src/main_sub.i"
 	@echo "... src/main_sub.s"
+	@echo "... src/pub_cp.o"
+	@echo "... src/pub_cp.i"
+	@echo "... src/pub_cp.s"
 .PHONY : help
 
 

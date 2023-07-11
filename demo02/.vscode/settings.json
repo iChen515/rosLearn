@@ -10,5 +10,7 @@
     ],
     "python.analysis.extraPaths": [
         "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ]
+    ],
+    "cmake.configureOnOpen": true,
+    "cmake.sourceDirectory": "/home/user/rosLearn/demo02/src/plumbing_pub_sub"
 }
