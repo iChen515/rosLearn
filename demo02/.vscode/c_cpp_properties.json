@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/ros/melodic/include"
+                "/opt/ros/melodic/include/**",
+                "/home/user/rosLearn/demo02/devel/include/**"
             ],
             "defines": [],
             "intelliSenseMode":"linux-gcc-x64",
