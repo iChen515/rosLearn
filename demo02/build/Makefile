@@ -454,6 +454,19 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named plumbing_pub_sub_node5
+
+# Build rule for target.
+plumbing_pub_sub_node5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub_node5
+.PHONY : plumbing_pub_sub_node5
+
+# fast build rule for target.
+plumbing_pub_sub_node5/fast:
+	$(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/build
+.PHONY : plumbing_pub_sub_node5/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -597,6 +610,19 @@ plumbing_pub_sub_genlisp/fast:
 .PHONY : plumbing_pub_sub_genlisp/fast
 
 #=============================================================================
+# Target rules for targets named plumbing_pub_sub_node4
+
+# Build rule for target.
+plumbing_pub_sub_node4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub_node4
+.PHONY : plumbing_pub_sub_node4
+
+# fast build rule for target.
+plumbing_pub_sub_node4/fast:
+	$(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/build
+.PHONY : plumbing_pub_sub_node4/fast
+
+#=============================================================================
 # Target rules for targets named plumbing_pub_sub_generate_messages_nodejs
 
 # Build rule for target.
@@ -709,6 +735,7 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... plumbing_pub_sub_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... plumbing_pub_sub_node5"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... plumbing_pub_sub_node2"
 	@echo "... roscpp_generate_messages_lisp"
@@ -720,6 +747,7 @@ help:
 	@echo "... plumbing_pub_sub_geneus"
 	@echo "... plumbing_pub_sub_generate_messages_lisp"
 	@echo "... plumbing_pub_sub_genlisp"
+	@echo "... plumbing_pub_sub_node4"
 	@echo "... plumbing_pub_sub_generate_messages_nodejs"
 	@echo "... plumbing_pub_sub_gennodejs"
 	@echo "... plumbing_pub_sub_generate_messages_py"

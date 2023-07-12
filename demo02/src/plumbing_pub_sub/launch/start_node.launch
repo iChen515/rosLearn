@@ -4,7 +4,10 @@
     <node pkg = "plumbing_pub_sub" type = "main_pub.py" name = "pub_py" output = "screen" />
     <node pkg = "plumbing_pub_sub" type = "main_sub.py" name = "sub_py" output = "screen" /> -->
     
-    <node pkg = "plumbing_pub_sub" type = "plumbing_pub_sub_node3" name = "pub_cp" output = "screen" />
-    <node pkg = "plumbing_pub_sub" type = "sub_cp.py" name = "sub_cp" output = "screen" />
+    <!-- <node pkg = "plumbing_pub_sub" type = "plumbing_pub_sub_node3" name = "pub_cp" output = "screen" /> -->
+    <!-- <node pkg = "plumbing_pub_sub" type = "sub_cp.py" name = "sub_cp" output = "screen" /> -->
     
+    <node pkg = "plumbing_pub_sub" type = "plumbing_pub_sub_node4" name = "Person_pub" output = "screen" />
+    <node pkg = "plumbing_pub_sub" type = "plumbing_pub_sub_node5" name = "Person_sub" output = "screen" />
+
 </launch>

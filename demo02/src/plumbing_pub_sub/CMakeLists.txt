@@ -146,6 +146,8 @@ include_directories(
 add_executable(${PROJECT_NAME}_node src/main_pub.cpp)
 add_executable(${PROJECT_NAME}_node2 src/main_sub.cpp)
 add_executable(${PROJECT_NAME}_node3 src/pub_cp.cpp)
+add_executable(${PROJECT_NAME}_node4 src/pubPerson.cpp)
+add_executable(${PROJECT_NAME}_node5 src/subPerson.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -156,6 +158,10 @@ add_executable(${PROJECT_NAME}_node3 src/pub_cp.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# 如果我们在编写完msg文件之后没有编译（即devel中还没有生成对应的头文件）
+# 但是在编译的时候会优先编译CPP文件，这就导致找不到头文件，从而产生错误
+# 为了避免这种错误，添加下边这句话就可以保证先编译msg文件再编译cpp
+add_dependencies(${PROJECT_NAME}_node4 ${PROJECT_NAME}_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}_node
@@ -165,6 +171,12 @@ target_link_libraries(${PROJECT_NAME}_node2
   ${catkin_LIBRARIES}
 )
 target_link_libraries(${PROJECT_NAME}_node3
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(${PROJECT_NAME}_node4
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(${PROJECT_NAME}_node5
   ${catkin_LIBRARIES}
 )
 

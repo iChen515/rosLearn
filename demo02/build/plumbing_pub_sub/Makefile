@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -100,18 +112,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target test
 test:
@@ -363,6 +363,21 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/rule:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/rule
+.PHONY : plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/rule
+
+# Convenience name for target.
+plumbing_pub_sub_node5: plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/rule
+
+.PHONY : plumbing_pub_sub_node5
+
+# fast build rule for target.
+plumbing_pub_sub_node5/fast:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/build
+.PHONY : plumbing_pub_sub_node5/fast
+
+# Convenience name for target.
 plumbing_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : plumbing_pub_sub/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
@@ -528,6 +543,21 @@ plumbing_pub_sub_genlisp/fast:
 .PHONY : plumbing_pub_sub_genlisp/fast
 
 # Convenience name for target.
+plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/rule:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/rule
+.PHONY : plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/rule
+
+# Convenience name for target.
+plumbing_pub_sub_node4: plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/rule
+
+.PHONY : plumbing_pub_sub_node4
+
+# fast build rule for target.
+plumbing_pub_sub_node4/fast:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/build
+.PHONY : plumbing_pub_sub_node4/fast
+
+# Convenience name for target.
 plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_generate_messages_nodejs.dir/rule:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_generate_messages_nodejs.dir/rule
 .PHONY : plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_generate_messages_nodejs.dir/rule
@@ -671,6 +701,33 @@ src/main_sub.cpp.s:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node2.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node2.dir/src/main_sub.cpp.s
 .PHONY : src/main_sub.cpp.s
 
+src/pubPerson.o: src/pubPerson.cpp.o
+
+.PHONY : src/pubPerson.o
+
+# target to build an object file
+src/pubPerson.cpp.o:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/src/pubPerson.cpp.o
+.PHONY : src/pubPerson.cpp.o
+
+src/pubPerson.i: src/pubPerson.cpp.i
+
+.PHONY : src/pubPerson.i
+
+# target to preprocess a source file
+src/pubPerson.cpp.i:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/src/pubPerson.cpp.i
+.PHONY : src/pubPerson.cpp.i
+
+src/pubPerson.s: src/pubPerson.cpp.s
+
+.PHONY : src/pubPerson.s
+
+# target to generate assembly for a file
+src/pubPerson.cpp.s:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node4.dir/src/pubPerson.cpp.s
+.PHONY : src/pubPerson.cpp.s
+
 src/pub_cp.o: src/pub_cp.cpp.o
 
 .PHONY : src/pub_cp.o
@@ -698,6 +755,33 @@ src/pub_cp.cpp.s:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node3.dir/src/pub_cp.cpp.s
 .PHONY : src/pub_cp.cpp.s
 
+src/subPerson.o: src/subPerson.cpp.o
+
+.PHONY : src/subPerson.o
+
+# target to build an object file
+src/subPerson.cpp.o:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/src/subPerson.cpp.o
+.PHONY : src/subPerson.cpp.o
+
+src/subPerson.i: src/subPerson.cpp.i
+
+.PHONY : src/subPerson.i
+
+# target to preprocess a source file
+src/subPerson.cpp.i:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/src/subPerson.cpp.i
+.PHONY : src/subPerson.cpp.i
+
+src/subPerson.s: src/subPerson.cpp.s
+
+.PHONY : src/subPerson.s
+
+# target to generate assembly for a file
+src/subPerson.cpp.s:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/build.make plumbing_pub_sub/CMakeFiles/plumbing_pub_sub_node5.dir/src/subPerson.cpp.s
+.PHONY : src/subPerson.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -705,6 +789,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... plumbing_pub_sub_node"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
@@ -718,6 +803,7 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... plumbing_pub_sub_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... plumbing_pub_sub_node5"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... plumbing_pub_sub_node2"
 	@echo "... roscpp_generate_messages_lisp"
@@ -731,11 +817,11 @@ help:
 	@echo "... plumbing_pub_sub_geneus"
 	@echo "... plumbing_pub_sub_generate_messages_lisp"
 	@echo "... plumbing_pub_sub_genlisp"
+	@echo "... plumbing_pub_sub_node4"
 	@echo "... plumbing_pub_sub_generate_messages_nodejs"
 	@echo "... plumbing_pub_sub_gennodejs"
 	@echo "... install"
 	@echo "... plumbing_pub_sub_generate_messages_py"
-	@echo "... install/local"
 	@echo "... plumbing_pub_sub_gencpp"
 	@echo "... plumbing_pub_sub_genpy"
 	@echo "... test"
@@ -747,9 +833,15 @@ help:
 	@echo "... src/main_sub.o"
 	@echo "... src/main_sub.i"
 	@echo "... src/main_sub.s"
+	@echo "... src/pubPerson.o"
+	@echo "... src/pubPerson.i"
+	@echo "... src/pubPerson.s"
 	@echo "... src/pub_cp.o"
 	@echo "... src/pub_cp.i"
 	@echo "... src/pub_cp.s"
+	@echo "... src/subPerson.o"
+	@echo "... src/subPerson.i"
+	@echo "... src/subPerson.s"
 .PHONY : help
 
 
