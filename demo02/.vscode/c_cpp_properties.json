@@ -4,7 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+                //下面这一行是为了导入ros melodic的路径，使得编写调用ros代码时有代码提示并避免误跑异常
                 "/opt/ros/melodic/include/**",
+                //下面这一行是为了导入生成的C++ 头文件(Person.h)的路径，使得编写调用cpp代码时有代码提示并避免误跑异常
                 "/home/user/rosLearn/demo02/devel/include/**"
             ],
             "defines": [],

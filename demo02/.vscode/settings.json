@@ -6,7 +6,10 @@
         "sstream": "cpp"
     },
     "python.autoComplete.extraPaths": [
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
+        // 该路径是方便调用melodic下的python文件
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        // 下面这一行是为了导入生成的py文件(_Person)的路径，使得编写调用py代码时有代码提示并避免误跑异常
+        "/home/user/rosLearn/demo02/devel/lib/python2.7/dist-packages"
     ],
     "python.analysis.extraPaths": [
         "/opt/ros/melodic/lib/python2.7/dist-packages"
