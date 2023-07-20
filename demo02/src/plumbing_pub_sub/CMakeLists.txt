@@ -194,6 +194,8 @@ catkin_install_python(PROGRAMS
   scripts/main_pub.py
   scripts/main_sub.py
   scripts/sub_cp.py
+  scripts/pubPerson.py
+  scripts/subPerson.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
