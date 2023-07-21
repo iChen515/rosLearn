@@ -9,10 +9,12 @@
         // 该路径是方便调用melodic下的python文件
         "/opt/ros/melodic/lib/python2.7/dist-packages",
         // 下面这一行是为了导入生成的py文件(_Person)的路径，使得编写调用py代码时有代码提示并避免误跑异常
-        "/home/user/rosLearn/demo02/devel/lib/python2.7/dist-packages"
+        "/home/user/rosLearn/demo02/devel/lib/python2.7/dist-packages",
+        "/home/user/rosLearn/demo02/devel/lib/python2.7/dist-packages/plumbing_pub_sub"
     ],
     "python.analysis.extraPaths": [
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/home/user/rosLearn/demo02/devel/lib/python2.7/dist-packages/plumbing_pub_sub"
     ],
     "cmake.configureOnOpen": true,
     "cmake.sourceDirectory": "/home/user/rosLearn/demo02/src/plumbing_pub_sub"

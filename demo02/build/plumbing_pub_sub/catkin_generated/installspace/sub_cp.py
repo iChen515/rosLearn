@@ -17,7 +17,7 @@ if __name__ == "__main__":
     # 2 初始化ros节点
     rospy.init_node("cp_sub")
     # 3 创建订阅者对象
-    sub = rospy.Subscriber("CP", String, doMsg, queue_size=10)
+    sub = rospy.Subscriber("CP", String, doMsg)
     # 4 编写订阅逻辑并订阅数据
     # 5 spin()
     rospy.spin()

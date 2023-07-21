@@ -12,7 +12,7 @@ from plumbing_pub_sub.msg import Person
 
 if __name__ == "__main__":
     # 2 初始化ros节点
-    rospy.init_node("self")
+    rospy.init_node("selfp")
     # 3 创建发布者对象
     pub = rospy.Publisher("selfPerson", Person, queue_size=10)
     # 4 编写发布逻辑并发布数据
