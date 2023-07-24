@@ -1,2 +1,2 @@
-plumbing_pub_sub
+plumbing_pub_sub:plumbing_server_client
 -DCATKIN_DEVEL_PREFIX=/home/user/rosLearn/demo02/devel -DCMAKE_INSTALL_PREFIX=/home/user/rosLearn/demo02/install -G Unix Makefiles

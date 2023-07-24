@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="plumbing_server_client" type="plumbing_server_client_node" name="sc_s" output="screen" />
+    <node pkg="plumbing_server_client" type="plumbing_server_client_node1" name="sc_c" output="screen" />
+</launch>
