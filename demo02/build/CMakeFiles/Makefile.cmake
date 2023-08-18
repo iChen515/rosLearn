@@ -35,6 +35,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/user/rosLearn/demo02/src/plumbing_pub_sub/scripts/sub_cp.py"
   "/home/user/rosLearn/demo02/src/plumbing_server_client/CMakeLists.txt"
   "/home/user/rosLearn/demo02/src/plumbing_server_client/package.xml"
+  "/home/user/rosLearn/demo02/src/plumbing_server_client/scripts/main_client.py"
+  "/home/user/rosLearn/demo02/src/plumbing_server_client/scripts/main_server.py"
   "/opt/ros/melodic/share/catkin/cmake/../package.xml"
   "/opt/ros/melodic/share/catkin/cmake/all.cmake"
   "/opt/ros/melodic/share/catkin/cmake/assert.cmake"
