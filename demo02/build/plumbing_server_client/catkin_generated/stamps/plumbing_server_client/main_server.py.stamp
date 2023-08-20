@@ -2,7 +2,7 @@
 #coding=utf-8
 
 import rospy
-from plumbing_server_client.srv import Addints, AddintsRequest, AddintsResponse
+# from plumbing_server_client.srv import Addints, AddintsRequest, AddintsResponse
 from plumbing_server_client.srv import *
 
 # 服务端：解析客户端请求，产生响应
@@ -34,5 +34,4 @@ if __name__ == "__main__":
     rospy.loginfo("服务器已经启动了")
     # 4. 处理逻辑（回调函数）
     # 5. spin()
-    rospy.spin()
     pass
