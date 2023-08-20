@@ -34,4 +34,5 @@ if __name__ == "__main__":
     rospy.loginfo("服务器已经启动了")
     # 4. 处理逻辑（回调函数）
     # 5. spin()
+    rospy.spin()
     pass

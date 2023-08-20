@@ -187,9 +187,6 @@ target_link_libraries(${PROJECT_NAME}_node1
 # )
 catkin_install_python(PROGRAMS
   scripts/main_server.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-catkin_install_python(PROGRAMS
   scripts/main_client.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
