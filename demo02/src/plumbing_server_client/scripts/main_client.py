@@ -3,6 +3,7 @@
 import rospy
 from plumbing_server_client.srv import Addints, AddintsRequest, AddintsResponse
 from plumbing_server_client.srv import *
+import sys
 
 # 客户端：组织并提交请求，处理服务端响应
 # 1. 导包
