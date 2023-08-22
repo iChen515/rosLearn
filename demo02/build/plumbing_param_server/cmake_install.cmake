@@ -52,3 +52,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plumbing_param_server" TYPE FILE FILES "/home/user/rosLearn/demo02/src/plumbing_param_server/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/plumbing_param_server" TYPE PROGRAM FILES "/home/user/rosLearn/demo02/build/plumbing_param_server/catkin_generated/installspace/paramSet.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/plumbing_param_server" TYPE PROGRAM FILES "/home/user/rosLearn/demo02/build/plumbing_param_server/catkin_generated/installspace/paramGet.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/plumbing_param_server" TYPE PROGRAM FILES "/home/user/rosLearn/demo02/build/plumbing_param_server/catkin_generated/installspace/paramDel.py")
+endif()
+

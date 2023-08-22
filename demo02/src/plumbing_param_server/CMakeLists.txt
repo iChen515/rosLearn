@@ -136,6 +136,7 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/plumbing_param_server_node.cpp)
 add_executable(${PROJECT_NAME}_node src/paramSet.cpp)
 add_executable(${PROJECT_NAME}_node1 src/paramGet.cpp)
+add_executable(${PROJECT_NAME}_node2 src/paramDel.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -157,6 +158,9 @@ target_link_libraries(${PROJECT_NAME}_node
 target_link_libraries(${PROJECT_NAME}_node1
 ${catkin_LIBRARIES}
 )
+target_link_libraries(${PROJECT_NAME}_node2
+${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
@@ -171,6 +175,12 @@ ${catkin_LIBRARIES}
 #   scripts/my_python_script
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
+catkin_install_python(PROGRAMS
+  scripts/paramSet.py
+  scripts/paramGet.py
+  scripts/paramDel.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
