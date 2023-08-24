@@ -10,6 +10,7 @@ import rospy
 if __name__ == "__main__":
     rospy.init_node("delete_param_p")
 
+    #try catch
     try:
         rospy.delete_param("p_int") #如果已经删除了或者本就不存在该键，则会报出异常
     except Exception as e: 
