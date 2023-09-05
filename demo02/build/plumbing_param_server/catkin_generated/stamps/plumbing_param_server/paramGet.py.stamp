@@ -1,15 +1,18 @@
 #! /usr/bin/env python
 #coding=utf-8
 
-"""
-    参数服务器操作之查询_Python实现:    
-        get_param(键,默认值)
-            当键存在时，返回对应的值，如果不存在返回默认值
-        get_param_cached
-        get_param_names
-        has_param
-        search_param
-"""
+
+# 演示参数的查询：
+#     get_param(键,默认值)
+#         当键存在时，返回对应的值，如果不存在返回默认值
+#     get_param_cached
+#           和 get_param 使用一样，只是效率高
+#     get_param_names
+#           获取所有的参数的键名 的集合
+#     has_param
+#           判断是否包含某个键
+#     search_param
+#           查找某个参数的键，并返回完整的键名
 
 import rospy
 
@@ -52,3 +55,5 @@ if __name__ == "__main__":
     # search_param
     key = rospy.search_param("p_int")
     rospy.loginfo("搜索的键 = %s",key)
+
+    pass
