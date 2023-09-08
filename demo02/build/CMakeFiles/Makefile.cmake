@@ -49,6 +49,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/user/rosLearn/demo02/src/plumbing_test/CMakeLists.txt"
   "/home/user/rosLearn/demo02/src/plumbing_test/package.xml"
   "/home/user/rosLearn/demo02/src/plumbing_test/scripts/test01_pub_twist_p.py"
+  "/home/user/rosLearn/demo02/src/plumbing_test/scripts/test02_sub_pose_p.py"
   "/opt/ros/melodic/share/catkin/cmake/../package.xml"
   "/opt/ros/melodic/share/catkin/cmake/all.cmake"
   "/opt/ros/melodic/share/catkin/cmake/assert.cmake"
