@@ -138,6 +138,7 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/plumbing_test_node.cpp)
 add_executable(${PROJECT_NAME}_node src/test01_pub_twist.cpp)
 add_executable(${PROJECT_NAME}_node1 src/test02_sub_pose.cpp)
+add_executable(${PROJECT_NAME}_node2 src/test03_service_client.cpp)
 
 
 ## Rename C++ executable without prefix
@@ -152,6 +153,7 @@ add_executable(${PROJECT_NAME}_node1 src/test02_sub_pose.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(${PROJECT_NAME}_node1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME}_node2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 
 
@@ -165,7 +167,9 @@ target_link_libraries(${PROJECT_NAME}_node
 target_link_libraries(${PROJECT_NAME}_node1
   ${catkin_LIBRARIES}
 )
-
+target_link_libraries(${PROJECT_NAME}_node2
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############

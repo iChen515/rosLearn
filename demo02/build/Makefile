@@ -974,6 +974,19 @@ turtlesim_generate_messages_py/fast:
 .PHONY : turtlesim_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named plumbing_test_node2
+
+# Build rule for target.
+plumbing_test_node2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plumbing_test_node2
+.PHONY : plumbing_test_node2
+
+# fast build rule for target.
+plumbing_test_node2/fast:
+	$(MAKE) -f plumbing_test/CMakeFiles/plumbing_test_node2.dir/build.make plumbing_test/CMakeFiles/plumbing_test_node2.dir/build
+.PHONY : plumbing_test_node2/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1217,6 +1230,7 @@ help:
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... turtlesim_generate_messages_py"
+	@echo "... plumbing_test_node2"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... turtlesim_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_cpp"
