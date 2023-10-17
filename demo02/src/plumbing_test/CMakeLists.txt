@@ -139,6 +139,7 @@ include_directories(
 add_executable(${PROJECT_NAME}_node src/test01_pub_twist.cpp)
 add_executable(${PROJECT_NAME}_node1 src/test02_sub_pose.cpp)
 add_executable(${PROJECT_NAME}_node2 src/test03_service_client.cpp)
+add_executable(${PROJECT_NAME}_node3 src/test04_param.cpp)
 
 
 ## Rename C++ executable without prefix
@@ -154,6 +155,7 @@ add_executable(${PROJECT_NAME}_node2 src/test03_service_client.cpp)
 add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(${PROJECT_NAME}_node1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(${PROJECT_NAME}_node2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME}_node3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 
 
@@ -168,6 +170,9 @@ target_link_libraries(${PROJECT_NAME}_node1
   ${catkin_LIBRARIES}
 )
 target_link_libraries(${PROJECT_NAME}_node2
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(${PROJECT_NAME}_node3
   ${catkin_LIBRARIES}
 )
 #############
@@ -189,6 +194,8 @@ catkin_install_python(PROGRAMS
 )
 catkin_install_python(PROGRAMS
   scripts/test02_sub_pose_p.py
+  scripts/test03_service_client_p.py
+  scripts/test04_param_p.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

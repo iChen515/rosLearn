@@ -122,6 +122,7 @@
 /home/user/rosLearn/demo02/build/plumbing_test/CMakeFiles/geometry_msgs_generate_messages_eus.dir
 /home/user/rosLearn/demo02/build/plumbing_test/CMakeFiles/turtlesim_generate_messages_nodejs.dir
 /home/user/rosLearn/demo02/build/plumbing_test/CMakeFiles/test.dir
+/home/user/rosLearn/demo02/build/plumbing_test/CMakeFiles/plumbing_test_node3.dir
 /home/user/rosLearn/demo02/build/plumbing_test/CMakeFiles/plumbing_test_node1.dir
 /home/user/rosLearn/demo02/build/plumbing_test/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
 /home/user/rosLearn/demo02/build/plumbing_test/CMakeFiles/std_srvs_generate_messages_eus.dir

@@ -318,6 +318,21 @@ turtlesim_generate_messages_nodejs/fast:
 .PHONY : turtlesim_generate_messages_nodejs/fast
 
 # Convenience name for target.
+plumbing_test/CMakeFiles/plumbing_test_node3.dir/rule:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_test/CMakeFiles/plumbing_test_node3.dir/rule
+.PHONY : plumbing_test/CMakeFiles/plumbing_test_node3.dir/rule
+
+# Convenience name for target.
+plumbing_test_node3: plumbing_test/CMakeFiles/plumbing_test_node3.dir/rule
+
+.PHONY : plumbing_test_node3
+
+# fast build rule for target.
+plumbing_test_node3/fast:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_test/CMakeFiles/plumbing_test_node3.dir/build.make plumbing_test/CMakeFiles/plumbing_test_node3.dir/build
+.PHONY : plumbing_test_node3/fast
+
+# Convenience name for target.
 plumbing_test/CMakeFiles/plumbing_test_node1.dir/rule:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_test/CMakeFiles/plumbing_test_node1.dir/rule
 .PHONY : plumbing_test/CMakeFiles/plumbing_test_node1.dir/rule
@@ -518,6 +533,33 @@ src/test03_service_client.cpp.s:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_test/CMakeFiles/plumbing_test_node2.dir/build.make plumbing_test/CMakeFiles/plumbing_test_node2.dir/src/test03_service_client.cpp.s
 .PHONY : src/test03_service_client.cpp.s
 
+src/test04_param.o: src/test04_param.cpp.o
+
+.PHONY : src/test04_param.o
+
+# target to build an object file
+src/test04_param.cpp.o:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_test/CMakeFiles/plumbing_test_node3.dir/build.make plumbing_test/CMakeFiles/plumbing_test_node3.dir/src/test04_param.cpp.o
+.PHONY : src/test04_param.cpp.o
+
+src/test04_param.i: src/test04_param.cpp.i
+
+.PHONY : src/test04_param.i
+
+# target to preprocess a source file
+src/test04_param.cpp.i:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_test/CMakeFiles/plumbing_test_node3.dir/build.make plumbing_test/CMakeFiles/plumbing_test_node3.dir/src/test04_param.cpp.i
+.PHONY : src/test04_param.cpp.i
+
+src/test04_param.s: src/test04_param.cpp.s
+
+.PHONY : src/test04_param.s
+
+# target to generate assembly for a file
+src/test04_param.cpp.s:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_test/CMakeFiles/plumbing_test_node3.dir/build.make plumbing_test/CMakeFiles/plumbing_test_node3.dir/src/test04_param.cpp.s
+.PHONY : src/test04_param.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -541,6 +583,7 @@ help:
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... turtlesim_generate_messages_nodejs"
 	@echo "... test"
+	@echo "... plumbing_test_node3"
 	@echo "... plumbing_test_node1"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_eus"
@@ -558,6 +601,9 @@ help:
 	@echo "... src/test03_service_client.o"
 	@echo "... src/test03_service_client.i"
 	@echo "... src/test03_service_client.s"
+	@echo "... src/test04_param.o"
+	@echo "... src/test04_param.i"
+	@echo "... src/test04_param.s"
 .PHONY : help
 
 
