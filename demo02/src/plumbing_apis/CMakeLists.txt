@@ -136,6 +136,7 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/plumbing_apis_node.cpp)
 add_executable(${PROJECT_NAME}_node src/demo01_apis_pub.cpp)
 add_executable(${PROJECT_NAME}_node1 src/demo02_apis_sub.cpp)
+add_executable(${PROJECT_NAME}_node2 src/demo03_apis_time.cpp)
 
 
 ## Rename C++ executable without prefix
@@ -158,6 +159,10 @@ target_link_libraries(${PROJECT_NAME}_node
 target_link_libraries(${PROJECT_NAME}_node1
 ${catkin_LIBRARIES}
 )
+target_link_libraries(${PROJECT_NAME}_node2
+${catkin_LIBRARIES}
+)
+
 
 #############
 ## Install ##

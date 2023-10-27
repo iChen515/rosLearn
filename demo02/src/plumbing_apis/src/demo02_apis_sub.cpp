@@ -40,6 +40,9 @@ int main(int argc, char  *argv[])
 
     //     6.设置循环调用回调函数
     ros::spin();//循环读取接收的数据，并调用回调函数处理
+    ROS_INFO("spin后的语句将不会被执行");
+    // ros::spin() 是进入了循环执行回调函数，而 ros::spinOnce() 只会执行一次回调函数(没有循环)，
+    // 在 ros::spin() 后的语句不会执行到，而 ros::spinOnce() 后的语句可以执行。
 
     return 0;
 }

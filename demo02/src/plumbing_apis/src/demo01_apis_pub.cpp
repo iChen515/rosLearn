@@ -136,6 +136,9 @@ ros::Publisher pub = handle.advertise<std_msgs::Empty>("my_topic", 1);
         count++;//循环结束前，让 count 自增
         //暂无应用
         ros::spinOnce();
+        ROS_INFO("一轮回调调试结束-------");
+        // ros::spin() 是进入了循环执行回调函数，而 ros::spinOnce() 只会执行一次回调函数(没有循环)，
+        // 在 ros::spin() 后的语句不会执行到，而 ros::spinOnce() 后的语句可以执行。
     }
 
 
