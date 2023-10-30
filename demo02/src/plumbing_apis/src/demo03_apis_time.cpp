@@ -22,7 +22,25 @@
                 2 持续时间之间也可以进行加减
                 3 时刻之间可以相减，不可以相加
 
+    需求4：每间隔一秒钟，在控制台输出一段文本
+    实现：
+                方法1：ros::Rate()
+                方法2：定时器
+    
+    注意：
+                创建：nh.createTimer()
+                参数1：时间间隔
+                参数2：回调函数（时间事件   TimerEvent）
+                参数3：是否只执行一次
+                参数4：是否自动启动（当设置为   false，需要手动调用     timer.start()）
+
+                定时器启动后：ros::spin()
+
 */
+void cb(const ros::TimerEvent & event){
+    ROS_INFO("-------------------");
+    ROS_INFO("函数被调用的时刻：%.2f", event.current_real.toSec());
+}
 
 int main(int argc, char * argv[]){
     setlocale(LC_ALL,"");
@@ -82,9 +100,18 @@ int main(int argc, char * argv[]){
     ros::Duration du4 = du1 - du2;
     ROS_INFO("时间相减：%.2f", du4.toSec());
 
+    // ————————————————————————需求4：定时器——————————————————————————————
+    // ros::Timer createTimer(ros::Duration period,                                  // 时间间隔 ------ 1s
+    //                                                  const ros::TimerCallback &callback,   // 回调函数 ------ 封装业务
+    //                                                  bool oneshot = false,                                  // 是否一次性
+    //                                                  bool autostart = true)                                 // 是否自动启动
+
+    // ros::Timer timer = nh.createTimer(ros::Duration(1), cb);
+    // ros::Timer timer = nh.createTimer(ros::Duration(1), cb, true);
+    ros::Timer timer = nh.createTimer(ros::Duration(1), cb, false, false);  // 需要手动启动
+    timer.start();  // 手动启动
+
+    ros::spin();      //必须 spin 回旋
     
-
-
-
     return 0;
 }
