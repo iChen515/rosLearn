@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named plumbing_apis_node3
+
+# Build rule for target.
+plumbing_apis_node3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plumbing_apis_node3
+.PHONY : plumbing_apis_node3
+
+# fast build rule for target.
+plumbing_apis_node3/fast:
+	$(MAKE) -f plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/build.make plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/build
+.PHONY : plumbing_apis_node3/fast
+
+#=============================================================================
 # Target rules for targets named plumbing_apis_node2
 
 # Build rule for target.
@@ -1229,6 +1242,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... plumbing_apis_node3"
 	@echo "... plumbing_apis_node2"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"

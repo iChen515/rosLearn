@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/rule:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/rule
+.PHONY : plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/rule
+
+# Convenience name for target.
+plumbing_apis_node3: plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/rule
+
+.PHONY : plumbing_apis_node3
+
+# fast build rule for target.
+plumbing_apis_node3/fast:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/build.make plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/build
+.PHONY : plumbing_apis_node3/fast
+
+# Convenience name for target.
 plumbing_apis/CMakeFiles/plumbing_apis_node2.dir/rule:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f CMakeFiles/Makefile2 plumbing_apis/CMakeFiles/plumbing_apis_node2.dir/rule
 .PHONY : plumbing_apis/CMakeFiles/plumbing_apis_node2.dir/rule
@@ -518,6 +533,33 @@ src/demo03_apis_time.cpp.s:
 	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_apis/CMakeFiles/plumbing_apis_node2.dir/build.make plumbing_apis/CMakeFiles/plumbing_apis_node2.dir/src/demo03_apis_time.cpp.s
 .PHONY : src/demo03_apis_time.cpp.s
 
+src/demo04_apis_log.o: src/demo04_apis_log.cpp.o
+
+.PHONY : src/demo04_apis_log.o
+
+# target to build an object file
+src/demo04_apis_log.cpp.o:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/build.make plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/src/demo04_apis_log.cpp.o
+.PHONY : src/demo04_apis_log.cpp.o
+
+src/demo04_apis_log.i: src/demo04_apis_log.cpp.i
+
+.PHONY : src/demo04_apis_log.i
+
+# target to preprocess a source file
+src/demo04_apis_log.cpp.i:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/build.make plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/src/demo04_apis_log.cpp.i
+.PHONY : src/demo04_apis_log.cpp.i
+
+src/demo04_apis_log.s: src/demo04_apis_log.cpp.s
+
+.PHONY : src/demo04_apis_log.s
+
+# target to generate assembly for a file
+src/demo04_apis_log.cpp.s:
+	cd /home/user/rosLearn/demo02/build && $(MAKE) -f plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/build.make plumbing_apis/CMakeFiles/plumbing_apis_node3.dir/src/demo04_apis_log.cpp.s
+.PHONY : src/demo04_apis_log.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -528,6 +570,7 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... plumbing_apis_node3"
 	@echo "... list_install_components"
 	@echo "... plumbing_apis_node2"
 	@echo "... roscpp_generate_messages_py"
@@ -558,6 +601,9 @@ help:
 	@echo "... src/demo03_apis_time.o"
 	@echo "... src/demo03_apis_time.i"
 	@echo "... src/demo03_apis_time.s"
+	@echo "... src/demo04_apis_log.o"
+	@echo "... src/demo04_apis_log.i"
+	@echo "... src/demo04_apis_log.s"
 .PHONY : help
 
 

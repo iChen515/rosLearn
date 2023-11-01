@@ -137,6 +137,8 @@ include_directories(
 add_executable(${PROJECT_NAME}_node src/demo01_apis_pub.cpp)
 add_executable(${PROJECT_NAME}_node1 src/demo02_apis_sub.cpp)
 add_executable(${PROJECT_NAME}_node2 src/demo03_apis_time.cpp)
+add_executable(${PROJECT_NAME}_node3 src/demo04_apis_log.cpp)
+
 
 
 ## Rename C++ executable without prefix
@@ -160,6 +162,9 @@ target_link_libraries(${PROJECT_NAME}_node1
 ${catkin_LIBRARIES}
 )
 target_link_libraries(${PROJECT_NAME}_node2
+${catkin_LIBRARIES}
+)
+target_link_libraries(${PROJECT_NAME}_node3
 ${catkin_LIBRARIES}
 )
 

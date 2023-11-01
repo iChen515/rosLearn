@@ -39,6 +39,7 @@
 /home/user/rosLearn/demo02/build/plumbing_apis/CMakeFiles/install/local.dir
 /home/user/rosLearn/demo02/build/plumbing_apis/CMakeFiles/rebuild_cache.dir
 /home/user/rosLearn/demo02/build/plumbing_apis/CMakeFiles/test.dir
+/home/user/rosLearn/demo02/build/plumbing_apis/CMakeFiles/plumbing_apis_node3.dir
 /home/user/rosLearn/demo02/build/plumbing_apis/CMakeFiles/list_install_components.dir
 /home/user/rosLearn/demo02/build/plumbing_apis/CMakeFiles/plumbing_apis_node2.dir
 /home/user/rosLearn/demo02/build/plumbing_apis/CMakeFiles/roscpp_generate_messages_py.dir
