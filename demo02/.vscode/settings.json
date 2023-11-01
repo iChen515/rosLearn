@@ -19,5 +19,6 @@
         "/home/user/rosLearn/demo02/devel/lib/python2.7/dist-packages/plumbing_pub_sub"
     ],
     "cmake.configureOnOpen": true,
-    "cmake.sourceDirectory": "/home/user/rosLearn/demo02/src/plumbing_pub_sub"
+    "cmake.sourceDirectory": "/home/user/rosLearn/demo02/src/plumbing_pub_sub",
+    "C_Cpp.errorSquiggles": "disabled"
 }

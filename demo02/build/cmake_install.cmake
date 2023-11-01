@@ -132,6 +132,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/user/rosLearn/demo02/build/gtest/cmake_install.cmake")
   include("/home/user/rosLearn/demo02/build/plumbing_apis/cmake_install.cmake")
+  include("/home/user/rosLearn/demo02/build/plumbing_head/cmake_install.cmake")
+  include("/home/user/rosLearn/demo02/build/plumbing_head_src/cmake_install.cmake")
   include("/home/user/rosLearn/demo02/build/plumbing_param_server/cmake_install.cmake")
   include("/home/user/rosLearn/demo02/build/plumbing_pub_sub/cmake_install.cmake")
   include("/home/user/rosLearn/demo02/build/plumbing_server_client/cmake_install.cmake")
