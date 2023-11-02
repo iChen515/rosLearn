@@ -360,6 +360,12 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//Value Computed by CMake
+launch01_basic_BINARY_DIR:STATIC=/home/user/rosLearn/demo02/build/launch01_basic
+
+//Value Computed by CMake
+launch01_basic_SOURCE_DIR:STATIC=/home/user/rosLearn/demo02/src/launch01_basic
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
@@ -389,6 +395,12 @@ plumbing_head_src_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libroscpp.so;g
 
 //Value Computed by CMake
 plumbing_head_src_SOURCE_DIR:STATIC=/home/user/rosLearn/demo02/src/plumbing_head_src
+
+//Value Computed by CMake
+plumbing_my_BINARY_DIR:STATIC=/home/user/rosLearn/demo02/build/plumbing_my
+
+//Value Computed by CMake
+plumbing_my_SOURCE_DIR:STATIC=/home/user/rosLearn/demo02/src/plumbing_my
 
 //Value Computed by CMake
 plumbing_param_server_BINARY_DIR:STATIC=/home/user/rosLearn/demo02/build/plumbing_param_server
@@ -560,7 +572,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

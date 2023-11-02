@@ -1,0 +1,41 @@
+<!-- 
+<launch>标签是所有 launch 文件的根标签，充当其他标签的容器
+    1.属性
+    deprecated = "弃用声明"
+    告知用户当前 launch 文件已经弃用
+
+    2.子级标签
+    所有其它标签都是launch的子级
+ -->
+
+<!-- <launch deprecated="此文件已经弃用，不建议使用"> -->
+<launch>
+
+<!-- <node>标签用于指定 ROS 节点，是最常见的标签，需要注意的是: roslaunch 命令不能保证按照 node 的声明顺序来启动节点(节点的启动是多进程的) 
+    pkg="包名"                                ———  节点所属的包
+    type="nodeType"                    ——— 节点类型(与之相同名称的可执行文件)
+    name="nodeName"               ——— 节点名称(在 ROS 网络拓扑中节点的名称)
+    output="log | screen"            ——— 日志发送目标，可以设置为 log 日志文件，或 screen 屏幕,默认是 log
+    args="参数1 参数2 参数3"    ——— 将参数传递给节点
+    machine="机器名"                 ——— 在指定机器上启动节点
+    respawn="true | false"          ——— 如果节点退出，是否自动重启
+    respawn_delay=" N"              ——— 如果 respawn 为 true, 那么延迟 N 秒后启动节点
+    required="true | false"         ——— 该节点是否必须，如果为 true,那么如果该节点退出，将杀死整个 roslaunch
+    ns="xxx"                                    ——— 在指定命名空间 xxx 中启动节点，比如ns="hello"时，启动 my_turtle 节点时，节点名变为 hello/my_turtle
+    clear_params="true | false"      ———    在启动前，删除节点的私有空间的所有参数
+-->
+    <!-- 启动节点-->
+    <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen"  respawn="true" respawn_delay="3" >
+        <!-- remap 用于话题topic重命名
+            1.属性
+            from="xxx" ———  原始话题名称
+            to="yyy"  ———  目标名称
+            2.子级标签 无 
+        -->
+        <remap from="/turtle1/cmd_vel" to="/cmd_vel"/>
+    </node>
+    <!-- 键盘控制节点-->
+    <node pkg="turtlesim" type="turtle_teleop_key" name="my_key" output="screen"/>
+
+    
+</launch>

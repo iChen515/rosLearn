@@ -1,2 +1,2 @@
-plumbing_apis:plumbing_head:plumbing_head_src:plumbing_param_server:plumbing_pub_sub:plumbing_server_client:plumbing_test
+launch01_basic:plumbing_apis:plumbing_head:plumbing_head_src:plumbing_my:plumbing_param_server:plumbing_pub_sub:plumbing_server_client:plumbing_test
 -DCATKIN_DEVEL_PREFIX=/home/user/rosLearn/demo02/devel -DCMAKE_INSTALL_PREFIX=/home/user/rosLearn/demo02/install -G Unix Makefiles
