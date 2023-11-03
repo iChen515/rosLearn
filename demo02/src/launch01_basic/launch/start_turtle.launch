@@ -24,8 +24,46 @@
     ns="xxx"                                    ——— 在指定命名空间 xxx 中启动节点，比如ns="hello"时，启动 my_turtle 节点时，节点名变为 hello/my_turtle
     clear_params="true | false"      ———    在启动前，删除节点的私有空间的所有参数
 -->
-    <!-- 启动节点-->
+    <!--小海龟启动节点-->
+
+    <!-- param 使用：向参数服务器设置参数 
+        <param>标签主要用于在参数服务器上设置参数，参数源可以在标签中通过 value 指定，
+            也可以通过外部文件加载，在<node>标签中时，相当于私有命名空间。
+                1.属性
+                name="命名空间/参数名"  ———  参数名称，可以包含命名空间
+                value="xxx" (可选)  ———  定义参数值，如果此处省略，必须指定外部文件作为参数源
+                type="str | int | double | bool | yaml" (可选)  ———  指定参数类型，如果未指定，roslaunch 会尝试确定参数类型，规则如下:
+                                            如果包含 '.' 的数字解析未浮点型，否则为整型
+                                            "true" 和 "false" 是 bool 值(不区分大小写)
+                                            其他是字符串
+    -->
+    <!-- 格式1：launch 下 ，node 之外 -->
+    <param name="param_A" type="int" value="100"/>
+
+    <!-- rosparam使用：操作参数服务器数据 
+        <rosparam>标签可以从 YAML 文件导入参数，或将参数导出到 YAML 文件，也可以用来删除参数，
+        <rosparam>标签在<node>标签中时被视为私有。
+            1.属性
+            command="load | dump | delete" (可选，默认 load)  ———  加载、导出或删除参数
+            file="$(find xxxxx)/xxx/yyy...."  ———  加载或导出到的 yaml 文件
+            param="参数名称"
+            ns="命名空间" (可选)
+    -->
+    <!-- 格式1：launch 下 ，node 之外 -->
+    <!-- 加载参数 -->
+    <rosparam command="load" file="$(find launch01_basic)/launch/rosparams.yaml" />
+    <!-- 导出参数   如果直接在这里导出会发现虽然通过rosparam list可以看到很多 与该launch文件相关的 param 但是并没有导出，
+        这是因为rosparam标签运行的优先级非常高，其他的参数还没有来得及生成 -->
+    <rosparam command="dump" file="$(find launch01_basic)/launch/rosparams_out.yaml" />
+
+
     <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen"  respawn="true" respawn_delay="3" >
+        <!-- 格式2：node 下 -->
+        <param name="param_B" type="double" value="3.14"/>
+
+        <!-- 格式2：node 下 -->
+        <rosparam command="load" file="$(find launch01_basic)/launch/rosparams.yaml" />
+
         <!-- remap 用于话题topic重命名
             1.属性
             from="xxx" ———  原始话题名称

@@ -1,0 +1,22 @@
+<launch>
+    <!-- 需求：演示 arg 使用，需要设置多个参数，这些参数使用的是同一个值（小车的长度），怎么设置？
+        <arg>标签是用于动态传参，类似于函数的参数，可以增强launch文件的灵活性
+        1.属性
+        name="参数名称"
+        default="默认值" (可选)
+        value="数值" (可选)     ———   不可以与 default 并存
+        doc="描述"  ———  参数说明
+        2.子级标签
+        无
+ -->
+    <!-- 一般方式： -->
+    <!-- <param name="A" value="1" />
+    <param name="B" value="1" />
+    <param name="C" value="1" /> -->
+
+    <arg name="car_length" default="1" />
+    <param name="A" value="$(arg car_length)" />
+    <param name="B" value="$(arg car_length)" />
+    <param name="C" value="$(arg car_length)" />
+
+</launch>

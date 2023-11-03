@@ -1,0 +1,7 @@
+<launch>
+    <!-- 等start_turtle.launch启动完毕后，再启动该launch就可以看到param正常导出了 -->
+    <rosparam command="dump" file="$(find launch01_basic)/launch/rosparams_out.yaml" />
+
+    <!-- 删除参数 -->
+    <rosparam command="delete" param="bg_B" />
+</launch>
