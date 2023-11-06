@@ -138,6 +138,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/user/rosLearn/demo02/build/plumbing_param_server/cmake_install.cmake")
   include("/home/user/rosLearn/demo02/build/plumbing_pub_sub/cmake_install.cmake")
   include("/home/user/rosLearn/demo02/build/plumbing_server_client/cmake_install.cmake")
+  include("/home/user/rosLearn/demo02/build/rename01_node/cmake_install.cmake")
+  include("/home/user/rosLearn/demo02/build/rename02_topic/cmake_install.cmake")
   include("/home/user/rosLearn/demo02/build/launch01_basic/cmake_install.cmake")
   include("/home/user/rosLearn/demo02/build/plumbing_test/cmake_install.cmake")
 

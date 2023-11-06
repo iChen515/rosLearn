@@ -2574,6 +2574,42 @@ clean: plumbing_server_client/CMakeFiles/plumbing_server_client_node1.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory rename01_node
+
+# Convenience name for "all" pass in the directory.
+rename01_node/all:
+
+.PHONY : rename01_node/all
+
+# Convenience name for "clean" pass in the directory.
+rename01_node/clean:
+
+.PHONY : rename01_node/clean
+
+# Convenience name for "preinstall" pass in the directory.
+rename01_node/preinstall:
+
+.PHONY : rename01_node/preinstall
+
+#=============================================================================
+# Directory level rules for directory rename02_topic
+
+# Convenience name for "all" pass in the directory.
+rename02_topic/all:
+
+.PHONY : rename02_topic/all
+
+# Convenience name for "clean" pass in the directory.
+rename02_topic/clean:
+
+.PHONY : rename02_topic/clean
+
+# Convenience name for "preinstall" pass in the directory.
+rename02_topic/preinstall:
+
+.PHONY : rename02_topic/preinstall
+
+#=============================================================================
 # Directory level rules for directory launch01_basic
 
 # Convenience name for "all" pass in the directory.
