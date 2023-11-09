@@ -1026,6 +1026,19 @@ plumbing_server_client_node1/fast:
 .PHONY : plumbing_server_client_node1/fast
 
 #=============================================================================
+# Target rules for targets named rename02_topic_node
+
+# Build rule for target.
+rename02_topic_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rename02_topic_node
+.PHONY : rename02_topic_node
+
+# fast build rule for target.
+rename02_topic_node/fast:
+	$(MAKE) -f rename02_topic/CMakeFiles/rename02_topic_node.dir/build.make rename02_topic/CMakeFiles/rename02_topic_node.dir/build
+.PHONY : rename02_topic_node/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1351,6 +1364,7 @@ help:
 	@echo "... plumbing_server_client_generate_messages_py"
 	@echo "... plumbing_server_client_genpy"
 	@echo "... plumbing_server_client_node1"
+	@echo "... rename02_topic_node"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... turtlesim_generate_messages_nodejs"
