@@ -156,6 +156,14 @@
 /home/user/rosLearn/demo02/build/rename02_topic/CMakeFiles/edit_cache.dir
 /home/user/rosLearn/demo02/build/rename02_topic/CMakeFiles/rebuild_cache.dir
 /home/user/rosLearn/demo02/build/rename02_topic/CMakeFiles/install.dir
+/home/user/rosLearn/demo02/build/rename03_param/CMakeFiles/install/strip.dir
+/home/user/rosLearn/demo02/build/rename03_param/CMakeFiles/install/local.dir
+/home/user/rosLearn/demo02/build/rename03_param/CMakeFiles/test.dir
+/home/user/rosLearn/demo02/build/rename03_param/CMakeFiles/list_install_components.dir
+/home/user/rosLearn/demo02/build/rename03_param/CMakeFiles/rename03_param_node.dir
+/home/user/rosLearn/demo02/build/rename03_param/CMakeFiles/rebuild_cache.dir
+/home/user/rosLearn/demo02/build/rename03_param/CMakeFiles/edit_cache.dir
+/home/user/rosLearn/demo02/build/rename03_param/CMakeFiles/install.dir
 /home/user/rosLearn/demo02/build/launch01_basic/CMakeFiles/install/strip.dir
 /home/user/rosLearn/demo02/build/launch01_basic/CMakeFiles/install/local.dir
 /home/user/rosLearn/demo02/build/launch01_basic/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
