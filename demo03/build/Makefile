@@ -766,6 +766,19 @@ tf01_static_node/fast:
 .PHONY : tf01_static_node/fast
 
 #=============================================================================
+# Target rules for targets named tf03_tfs_node
+
+# Build rule for target.
+tf03_tfs_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf03_tfs_node
+.PHONY : tf03_tfs_node
+
+# fast build rule for target.
+tf03_tfs_node/fast:
+	$(MAKE) -f tf03_tfs/CMakeFiles/tf03_tfs_node.dir/build.make tf03_tfs/CMakeFiles/tf03_tfs_node.dir/build
+.PHONY : tf03_tfs_node/fast
+
+#=============================================================================
 # Target rules for targets named std_srvs_generate_messages_cpp
 
 # Build rule for target.
@@ -980,6 +993,7 @@ help:
 	@echo "... actionlib_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... tf01_static_node"
+	@echo "... tf03_tfs_node"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... turtlesim_generate_messages_lisp"
 	@echo "... tf02_dynamic_node1"

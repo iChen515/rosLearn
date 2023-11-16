@@ -9,6 +9,7 @@
         "functional": "cpp",
         "istream": "cpp",
         "memory": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "optional": "cpp"
     }
 }
