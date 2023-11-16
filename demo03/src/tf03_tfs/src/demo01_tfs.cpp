@@ -2,6 +2,7 @@
 #include "tf2_ros/transform_listener.h"
 #include "tf2_ros/buffer.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.h"
+#include "geometry_msgs/TransformStamped.h"
 
 /*
     订阅方实现：
@@ -36,10 +37,28 @@ int main(int argc, char ** argv){
     while(ros::ok()){
         try{    
                 // 1 计算son1与son2的相对关系
+                /*
+                    A 相对于 B 的坐标系关系
+
+                    参数1：目标坐标系 B
+                    参数2：源坐标系      A
+                    参数3：ros::Time(0) 取间隔最短的两个坐标关系帧计算相对关系
+                    返回值：geometry_msgs::TransformStamped 源相对于目标坐标系的相对关系
+                */
+                geometry_msgs::TransformStamped son12Son2 = buffer.lookupTransform("son2", "son1", ros::Time(0));
+                ROS_INFO("son1 与 son2 的相对关系：父级：%s， 子级：%s， 偏移量（%.2f, %.2f, %.2f）", 
+                            son12Son2.header.frame_id.c_str(), 
+                            son12Son2.child_frame_id.c_str(),
+                            son12Son2.transform.translation.x,
+                            son12Son2.transform.translation.y,
+                            son12Son2.transform.translation.z);
 
                 // 2 计算son1当中某个坐标点在son2中的坐标值
-                geometry_msgs::PointStamped paAtSon2 = buffer.transform(psAtSon1, "son2");
-
+                geometry_msgs::PointStamped psAtSon2 = buffer.transform(psAtSon1, "son2");
+                ROS_INFO("坐标点在 Son2 中的值（%.2f, %.2f, %.2f）",
+                        psAtSon2.point.x,
+                        psAtSon2.point.y,
+                        psAtSon2.point.z);
         } catch(const std::exception& e){
             ROS_INFO("tf2 错误提示内容: %s", e.what());
         }
