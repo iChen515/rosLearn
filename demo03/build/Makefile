@@ -934,6 +934,19 @@ turtlesim_generate_messages_py/fast:
 	$(MAKE) -f tf02_dynamic/CMakeFiles/turtlesim_generate_messages_py.dir/build.make tf02_dynamic/CMakeFiles/turtlesim_generate_messages_py.dir/build
 .PHONY : turtlesim_generate_messages_py/fast
 
+#=============================================================================
+# Target rules for targets named tf04_test_node
+
+# Build rule for target.
+tf04_test_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf04_test_node
+.PHONY : tf04_test_node
+
+# fast build rule for target.
+tf04_test_node/fast:
+	$(MAKE) -f tf04_test/CMakeFiles/tf04_test_node.dir/build.make tf04_test/CMakeFiles/tf04_test_node.dir/build
+.PHONY : tf04_test_node/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1006,6 +1019,7 @@ help:
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... turtlesim_generate_messages_py"
+	@echo "... tf04_test_node"
 .PHONY : help
 
 

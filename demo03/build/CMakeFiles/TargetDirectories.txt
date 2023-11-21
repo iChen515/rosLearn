@@ -106,3 +106,11 @@
 /home/user/rosLearn/demo03/build/tf02_dynamic/CMakeFiles/edit_cache.dir
 /home/user/rosLearn/demo03/build/tf02_dynamic/CMakeFiles/turtlesim_generate_messages_py.dir
 /home/user/rosLearn/demo03/build/tf02_dynamic/CMakeFiles/rebuild_cache.dir
+/home/user/rosLearn/demo03/build/tf04_test/CMakeFiles/install/local.dir
+/home/user/rosLearn/demo03/build/tf04_test/CMakeFiles/test.dir
+/home/user/rosLearn/demo03/build/tf04_test/CMakeFiles/list_install_components.dir
+/home/user/rosLearn/demo03/build/tf04_test/CMakeFiles/install/strip.dir
+/home/user/rosLearn/demo03/build/tf04_test/CMakeFiles/tf04_test_node.dir
+/home/user/rosLearn/demo03/build/tf04_test/CMakeFiles/edit_cache.dir
+/home/user/rosLearn/demo03/build/tf04_test/CMakeFiles/rebuild_cache.dir
+/home/user/rosLearn/demo03/build/tf04_test/CMakeFiles/install.dir

@@ -426,6 +426,12 @@ tf03_tfs_BINARY_DIR:STATIC=/home/user/rosLearn/demo03/build/tf03_tfs
 //Value Computed by CMake
 tf03_tfs_SOURCE_DIR:STATIC=/home/user/rosLearn/demo03/src/tf03_tfs
 
+//Value Computed by CMake
+tf04_test_BINARY_DIR:STATIC=/home/user/rosLearn/demo03/build/tf04_test
+
+//Value Computed by CMake
+tf04_test_SOURCE_DIR:STATIC=/home/user/rosLearn/demo03/src/tf04_test
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/melodic/share/tf2/cmake
 
@@ -557,7 +563,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

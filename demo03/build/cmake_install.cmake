@@ -134,6 +134,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/user/rosLearn/demo03/build/tf01_static/cmake_install.cmake")
   include("/home/user/rosLearn/demo03/build/tf03_tfs/cmake_install.cmake")
   include("/home/user/rosLearn/demo03/build/tf02_dynamic/cmake_install.cmake")
+  include("/home/user/rosLearn/demo03/build/tf04_test/cmake_install.cmake")
 
 endif()
 
