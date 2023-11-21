@@ -4,4 +4,15 @@
     <node pkg="turtlesim" type="turtle_teleop_key" name="key" output="screen" />
     <!-- 2 生成新的乌龟的节点 -->
     <node pkg="tf04_test" type="tf04_test_node" name="turtle2" output="screen" />
+
+    <!-- 3 需要启动两个乌龟相对于世界的坐标关系的发布 -->
+    <!-- 
+        基本实现思路：
+                1 节点只编写一个
+                2 这个节点需要启动两次
+                3 节点启动时动态传参：第一次传参给turtle1，第二次给turtle2
+     -->
+
+     <node pkg="tf04_test" type="tf04_test_node1" name="pub1" args="turtle1" output="screen" />
+     <node pkg="tf04_test" type="tf04_test_node1" name="pub2" args="turtle2" output="screen" />
 </launch>

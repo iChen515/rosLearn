@@ -56,6 +56,30 @@ CMAKE_BINARY_DIR = /home/user/rosLearn/demo03/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -89,18 +113,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -122,18 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,21 @@ preinstall/fast:
 depend:
 	cd /home/user/rosLearn/demo03/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+tf04_test/CMakeFiles/tf04_test_node1.dir/rule:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f CMakeFiles/Makefile2 tf04_test/CMakeFiles/tf04_test_node1.dir/rule
+.PHONY : tf04_test/CMakeFiles/tf04_test_node1.dir/rule
+
+# Convenience name for target.
+tf04_test_node1: tf04_test/CMakeFiles/tf04_test_node1.dir/rule
+
+.PHONY : tf04_test_node1
+
+# fast build rule for target.
+tf04_test_node1/fast:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node1.dir/build.make tf04_test/CMakeFiles/tf04_test_node1.dir/build
+.PHONY : tf04_test_node1/fast
 
 # Convenience name for target.
 tf04_test/CMakeFiles/tf04_test_node.dir/rule:
@@ -209,23 +224,54 @@ src/test01_new_turtle.cpp.s:
 	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node.dir/build.make tf04_test/CMakeFiles/tf04_test_node.dir/src/test01_new_turtle.cpp.s
 .PHONY : src/test01_new_turtle.cpp.s
 
+src/test02_pub_turtle.o: src/test02_pub_turtle.cpp.o
+
+.PHONY : src/test02_pub_turtle.o
+
+# target to build an object file
+src/test02_pub_turtle.cpp.o:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node1.dir/build.make tf04_test/CMakeFiles/tf04_test_node1.dir/src/test02_pub_turtle.cpp.o
+.PHONY : src/test02_pub_turtle.cpp.o
+
+src/test02_pub_turtle.i: src/test02_pub_turtle.cpp.i
+
+.PHONY : src/test02_pub_turtle.i
+
+# target to preprocess a source file
+src/test02_pub_turtle.cpp.i:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node1.dir/build.make tf04_test/CMakeFiles/tf04_test_node1.dir/src/test02_pub_turtle.cpp.i
+.PHONY : src/test02_pub_turtle.cpp.i
+
+src/test02_pub_turtle.s: src/test02_pub_turtle.cpp.s
+
+.PHONY : src/test02_pub_turtle.s
+
+# target to generate assembly for a file
+src/test02_pub_turtle.cpp.s:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node1.dir/build.make tf04_test/CMakeFiles/tf04_test_node1.dir/src/test02_pub_turtle.cpp.s
+.PHONY : src/test02_pub_turtle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install"
+	@echo "... tf04_test_node1"
+	@echo "... install/strip"
+	@echo "... tf04_test_node"
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... tf04_test_node"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... install"
 	@echo "... src/test01_new_turtle.o"
 	@echo "... src/test01_new_turtle.i"
 	@echo "... src/test01_new_turtle.s"
+	@echo "... src/test02_pub_turtle.o"
+	@echo "... src/test02_pub_turtle.i"
+	@echo "... src/test02_pub_turtle.s"
 .PHONY : help
 
 
