@@ -960,6 +960,19 @@ tf04_test_node/fast:
 	$(MAKE) -f tf04_test/CMakeFiles/tf04_test_node.dir/build.make tf04_test/CMakeFiles/tf04_test_node.dir/build
 .PHONY : tf04_test_node/fast
 
+#=============================================================================
+# Target rules for targets named tf04_test_node2
+
+# Build rule for target.
+tf04_test_node2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf04_test_node2
+.PHONY : tf04_test_node2
+
+# fast build rule for target.
+tf04_test_node2/fast:
+	$(MAKE) -f tf04_test/CMakeFiles/tf04_test_node2.dir/build.make tf04_test/CMakeFiles/tf04_test_node2.dir/build
+.PHONY : tf04_test_node2/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1034,6 +1047,7 @@ help:
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... tf04_test_node1"
 	@echo "... tf04_test_node"
+	@echo "... tf04_test_node2"
 .PHONY : help
 
 

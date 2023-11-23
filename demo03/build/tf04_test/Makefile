@@ -68,6 +68,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -102,16 +112,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -197,6 +197,21 @@ tf04_test_node/fast:
 	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node.dir/build.make tf04_test/CMakeFiles/tf04_test_node.dir/build
 .PHONY : tf04_test_node/fast
 
+# Convenience name for target.
+tf04_test/CMakeFiles/tf04_test_node2.dir/rule:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f CMakeFiles/Makefile2 tf04_test/CMakeFiles/tf04_test_node2.dir/rule
+.PHONY : tf04_test/CMakeFiles/tf04_test_node2.dir/rule
+
+# Convenience name for target.
+tf04_test_node2: tf04_test/CMakeFiles/tf04_test_node2.dir/rule
+
+.PHONY : tf04_test_node2
+
+# fast build rule for target.
+tf04_test_node2/fast:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node2.dir/build.make tf04_test/CMakeFiles/tf04_test_node2.dir/build
+.PHONY : tf04_test_node2/fast
+
 src/test01_new_turtle.o: src/test01_new_turtle.cpp.o
 
 .PHONY : src/test01_new_turtle.o
@@ -251,6 +266,33 @@ src/test02_pub_turtle.cpp.s:
 	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node1.dir/build.make tf04_test/CMakeFiles/tf04_test_node1.dir/src/test02_pub_turtle.cpp.s
 .PHONY : src/test02_pub_turtle.cpp.s
 
+src/test03_control_turtle2.o: src/test03_control_turtle2.cpp.o
+
+.PHONY : src/test03_control_turtle2.o
+
+# target to build an object file
+src/test03_control_turtle2.cpp.o:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node2.dir/build.make tf04_test/CMakeFiles/tf04_test_node2.dir/src/test03_control_turtle2.cpp.o
+.PHONY : src/test03_control_turtle2.cpp.o
+
+src/test03_control_turtle2.i: src/test03_control_turtle2.cpp.i
+
+.PHONY : src/test03_control_turtle2.i
+
+# target to preprocess a source file
+src/test03_control_turtle2.cpp.i:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node2.dir/build.make tf04_test/CMakeFiles/tf04_test_node2.dir/src/test03_control_turtle2.cpp.i
+.PHONY : src/test03_control_turtle2.cpp.i
+
+src/test03_control_turtle2.s: src/test03_control_turtle2.cpp.s
+
+.PHONY : src/test03_control_turtle2.s
+
+# target to generate assembly for a file
+src/test03_control_turtle2.cpp.s:
+	cd /home/user/rosLearn/demo03/build && $(MAKE) -f tf04_test/CMakeFiles/tf04_test_node2.dir/build.make tf04_test/CMakeFiles/tf04_test_node2.dir/src/test03_control_turtle2.cpp.s
+.PHONY : src/test03_control_turtle2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,13 +300,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... tf04_test_node1"
 	@echo "... install/strip"
 	@echo "... tf04_test_node"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... list_install_components"
 	@echo "... edit_cache"
+	@echo "... tf04_test_node2"
 	@echo "... rebuild_cache"
 	@echo "... src/test01_new_turtle.o"
 	@echo "... src/test01_new_turtle.i"
@@ -272,6 +315,9 @@ help:
 	@echo "... src/test02_pub_turtle.o"
 	@echo "... src/test02_pub_turtle.i"
 	@echo "... src/test02_pub_turtle.s"
+	@echo "... src/test03_control_turtle2.o"
+	@echo "... src/test03_control_turtle2.i"
+	@echo "... src/test03_control_turtle2.s"
 .PHONY : help
 
 

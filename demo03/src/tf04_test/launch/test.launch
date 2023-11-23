@@ -15,4 +15,9 @@
 
      <node pkg="tf04_test" type="tf04_test_node1" name="pub1" args="turtle1" output="screen" />
      <node pkg="tf04_test" type="tf04_test_node1" name="pub2" args="turtle2" output="screen" />
+    
+    <!-- 4 需要订阅 turtle1 和 turtle2 相对于世界坐标系的坐标消息，
+    并转换成 turtle1 相对于 turtle2的坐标关系，再生成速度消息 -->
+     <node pkg="tf04_test" type="tf04_test_node2" name="control" output="screen" />
+
 </launch>
